@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#carrito-componente{
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carrito-componente a{
+    border: 1px solid black;
+    padding: 10px;
+    width: 120px;
+    background-color: rgb(35, 153, 221);
+}
