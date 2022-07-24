@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#header{
+    display: flex;
+    height: 40%;
+    background-color: rgb(44, 122, 167);
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+#logo img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#logo h1{
+    display: block;
+}
+
+#logo h1 a{
+    color: black;
+}
+
+#lista{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#lista li{
+    display: flex;
+}
+
+#lista li a{
+    color: black;
+    font-size: 18px;
+}
+
+#carrito{
+    width: 15%;
+}
