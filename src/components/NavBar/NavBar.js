@@ -2,6 +2,12 @@ import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import Logo from './logo.svg'
 
+/* 
+Componente de la barra de navegación donde tenemos el logo/nombre de la página, botones para ir a otras secciones de la página y
+utilizamos el componente CartWidget para tener acceso al carrito
+*/
+
+
 function NavBar() {
   return (
     <header id="header">
@@ -14,7 +20,9 @@ function NavBar() {
         <li><a href='#'>Ofertas</a></li>
         <li><a href='#'>Novedades</a></li>
       </ul>
-      <CartWidget/>
+      <div id="div_carrito">
+        <CartWidget/>
+      </div>
     </header>
   )
 }

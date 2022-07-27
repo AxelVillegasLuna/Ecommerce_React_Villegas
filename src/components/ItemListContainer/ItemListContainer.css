@@ -1,13 +1,15 @@
+
+/*GENERAL*/
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-div p{
+/*CONTENEDOR PRINCIPAL*/
+#contenedor_principal p{
     padding: 20px;
     font-size: 50px;
 }

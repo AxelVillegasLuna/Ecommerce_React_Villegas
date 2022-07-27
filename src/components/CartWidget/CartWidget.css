@@ -1,14 +1,15 @@
+/*GENERAL*/
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*CONTENEDOR PRINCIPAL*/
 #carrito-componente{
-    margin-left: 60px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,6 @@
 #carrito-componente a{
     border: 1px solid black;
     padding: 10px;
-    width: 120px;
+    width: 100%;
     background-color: rgb(35, 153, 221);
 }

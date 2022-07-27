@@ -1,23 +1,25 @@
+/*GENERAL*/
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+/*CONTENEDOR PRINCIPAL*/
+#header{
+    display: flex;
+    max-height: 100px;
+    background-color: rgb(44, 122, 167);
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#header{
-    display: flex;
-    height: 40%;
-    background-color: rgb(44, 122, 167);
-}
-
+/*CONTENEDOR DEL LOGO*/
 #logo{
+width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
 }
 
 #logo img{
@@ -25,14 +27,11 @@
     max-height: 100px;
 }
 
-#logo h1{
-    display: block;
-}
-
 #logo h1 a{
     color: black;
 }
 
+/*CONTENEDOR DE LISTA DE OPCIONES*/
 #lista{
     width: 60%;
     display: flex;
@@ -40,11 +39,15 @@
     align-items: center;
 }
 
-#lista li{
-    display: flex;
-}
-
 #lista li a{
     color: black;
     font-size: 18px;
+}
+
+/*CONTENEDOR DEL BOTON DEL CARRITO (COMPONENTE)*/
+#div_carrito{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
