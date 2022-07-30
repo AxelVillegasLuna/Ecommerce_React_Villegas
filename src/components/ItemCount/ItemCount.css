@@ -1,0 +1,42 @@
+/*GENERAL*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*CONTADOR*/
+#count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 25px;
+}
+
+#count p{
+    font-size: 24px;
+}
+
+.btn_count{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*BOTON DE AGREGAR AL CARRITO*/
+
+#addCart{
+    margin: 10px;
+}
+
+#addCartBtn{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid rgb(132, 133, 130);
+    border-radius: 5px;
+    background-color: rgb(35, 153, 221);
+}

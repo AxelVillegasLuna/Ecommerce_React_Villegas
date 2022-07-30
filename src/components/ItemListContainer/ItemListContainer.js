@@ -1,4 +1,5 @@
-import './ItemListContainer.css'
+import './ItemListContainer.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 /*
 Componente contenedor que recibe una serie de props para ser mostradas en el mismo. En un futuro será el contenedor
@@ -7,9 +8,10 @@ de nuestros articulos
 
 function ItemListContainer(props) {
   return (
-    <div id="contenedor_principal">
+    <main id="contenedor_principal">
       <p>{props.greeting}</p>
-    </div>
+      <ItemCount stock="5" initial="1"></ItemCount>
+    </main>
   )
 }
 

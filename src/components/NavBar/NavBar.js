@@ -3,7 +3,7 @@ import './NavBar.css';
 import Logo from './logo.svg'
 
 /* 
-Componente de la barra de navegación donde tenemos el logo/nombre de la página, botones para ir a otras secciones de la página y
+Componente de la barra de navegación donde tenemos el logo/nombre de la página, botones para ir a otras secciones y
 utilizamos el componente CartWidget para tener acceso al carrito
 */
 
