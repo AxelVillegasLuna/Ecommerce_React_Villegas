@@ -1,0 +1,27 @@
+/*GENERAL*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*PRODUCTO*/
+.product{
+    width: 20%;
+    margin: 10px;
+}
+
+.imgProduct{
+    padding: 10px;
+}
+
+.titleProduct{
+    color: black;
+}
+
+.descProduct{
+    font-size: 20px;
+    padding: 10px;
+}

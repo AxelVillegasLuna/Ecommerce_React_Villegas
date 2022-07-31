@@ -3,6 +3,10 @@ import { useState } from "react"
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 
+/*
+Componente del contador utilizado para elegir la cantidad de cada uno de los productos de acuerdo a su stock
+*/
+
 const ItemCount = (props) => {
     const stock = parseInt(props.stock);
     const initial = parseInt(props.initial);
