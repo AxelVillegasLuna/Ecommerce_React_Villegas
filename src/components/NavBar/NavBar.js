@@ -1,6 +1,7 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import Logo from './logo.svg'
+import { Link } from 'react-router-dom';
 
 /* 
 Componente de la barra de navegación donde tenemos el logo/nombre de la página, botones para ir a otras secciones y
@@ -13,12 +14,12 @@ function NavBar() {
     <header id="header">
       <div id="logo">
         <img src={Logo} alt='Logo'/>
-        <h1><a href='index.html'>ProyectoEcommerce</a></h1>
+        <h1><Link to='/'>ProyectoEcommerce</Link></h1>
       </div>
       <ul id="listHeader">
-        <li><a href='#'>Más vendidos</a></li>
-        <li><a href='#'>Ofertas</a></li>
-        <li><a href='#'>Novedades</a></li>
+        <li><Link to='/category/notebook'>Notebooks</Link></li>
+        <li><Link to='category/smartwatch'>Smartwatchs</Link></li>
+        <li><Link to='category/tablet'>Tablets</Link></li>
       </ul>
       <div id="divCart">
         <CartWidget/>

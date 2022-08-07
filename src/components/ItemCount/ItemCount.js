@@ -33,6 +33,10 @@ const ItemCount = (props) => {
         }
     }
 
+    const showAlert = () => {
+        alert(`Se agregaron ${count} producto/s al carrito`);
+    }
+
     return (
         <div >
             <div id="count">
@@ -41,7 +45,7 @@ const ItemCount = (props) => {
                 <button className="btn_count" onClick={addCount}><BiPlus color='black' size="11px"/></button>
             </div>
             <div id="addCart">
-                <button id="addCartBtn">Agregar al carrito</button>
+                <button id="addCartBtn" onClick={showAlert}>Agregar al carrito</button>
             </div>  
         </div>
     )

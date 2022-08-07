@@ -1,0 +1,25 @@
+/*GENERAL*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.titleDetail{
+    margin: 15px;
+}
+
+.imgDetail{
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.descDetail{
+    margin: 5px;
+}
+
+.priceDetail{
+    padding: 10px;
+}

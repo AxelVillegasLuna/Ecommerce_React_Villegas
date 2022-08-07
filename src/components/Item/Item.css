@@ -9,19 +9,40 @@
 
 /*PRODUCTO*/
 .product{
+    border: 1px solid rgb(42, 170, 245);
+    padding: 0px 5px 10px 5px;
     width: 20%;
     margin: 10px;
+    border-radius: 20px;
 }
 
 .imgProduct{
     padding: 10px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .titleProduct{
+    display: block;
     color: black;
+    height: 50px;
 }
 
-.descProduct{
-    font-size: 20px;
+.priceProduct{
+    margin: 20px;
+}
+
+.divImg{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.btnDetails{
+    background-color: rgb(35, 153, 221);
+    color: black;
+    border: none;
     padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
 }

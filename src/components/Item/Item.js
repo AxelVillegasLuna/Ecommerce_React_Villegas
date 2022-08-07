@@ -1,17 +1,19 @@
 import './Item.css';
-import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
 /*
 Componente que muestra los datos de cada producto
 */
 
-const Item = (props) => {
+const Item = ({ id, img, title, price }) => {
   return (
     <article className="product">
-      <img src={props.img} alt='Imagen de producto' className="imgProduct"></img>
-      <h2><a href='#' className="titleProduct">{props.title}</a></h2>
-      <p className='descProduct'>{props.desc}</p>
-      <ItemCount stock={props.stock} initial="1"/>
+      <picture className='divImg'>
+        <img src={img} alt='Imagen de producto' className="imgProduct"></img>
+      </picture>
+      <h2><a href='#' className="titleProduct">{title}</a></h2>
+      <p className='priceProduct'>${price}</p>
+      <Link to={`/item/${id}`}><button className="btnDetails">Ver detalles</button></Link>
     </article>
   )
 }
