@@ -9,7 +9,7 @@ Componente del carrito de compras que muestra un botón para acceder a el
 function CartWidget() {
   return (
     <div id="componentCart">
-      <Link to='/'><BsFillCartFill color="black" size="24px"/></Link>
+      <Link to='/cart'><BsFillCartFill color="black" size="24px"/></Link>
     </div>
   )
 }

@@ -23,3 +23,16 @@
 .priceDetail{
     padding: 10px;
 }
+
+#divButtonHide p{
+    margin: 10px;
+}
+
+#divButtonHide button{
+    background-color: rgb(35, 153, 221);
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -10,6 +10,7 @@ Componente del contador utilizado para elegir la cantidad de cada uno de los pro
 const ItemCount = (props) => {
     const stock = parseInt(props.stock);
     const initial = parseInt(props.initial);
+    const onAddItems = props.onAddItems;
 
     const [count, setCount] = useState(initial);
     
@@ -33,8 +34,8 @@ const ItemCount = (props) => {
         }
     }
 
-    const showAlert = () => {
-        alert(`Se agregaron ${count} producto/s al carrito`);
+    const onAdd = () => {
+        onAddItems(props.id, props.title, props.price, count);
     }
 
     return (
@@ -45,7 +46,7 @@ const ItemCount = (props) => {
                 <button className="btn_count" onClick={addCount}><BiPlus color='black' size="11px"/></button>
             </div>
             <div id="addCart">
-                <button id="addCartBtn" onClick={showAlert}>Agregar al carrito</button>
+                <button id="addCartBtn" onClick={onAdd}>Agregar al carrito</button>
             </div>  
         </div>
     )

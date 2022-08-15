@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 Componente contenedor que realizada una llamada simulada a una "base de datos" y pasa lo obtenido al componente ItemList
 */
 
-function ItemListContainer(props) {
+function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
