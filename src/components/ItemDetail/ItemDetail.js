@@ -13,9 +13,9 @@ function ItemDetail( {id, title, description, img, price, stock} ) {
   const [showButton, setShowButton] = useState(false)
   const { addToCart } = useContext(CartContext);
 
-  const onAdd = (id, title, price, quantity) => {
+  const onAdd = (id, title, description, img, price, quantity) => {
     setProductCart(quantity);
-    const product = {id: id, title: title, price: price, quantity: quantity};
+    const product = {id: id, title: title, description: description, img: img, price: price, quantity: quantity};
     addToCart(product);
     setShowButton(true);
   }
@@ -31,7 +31,7 @@ function ItemDetail( {id, title, description, img, price, stock} ) {
         <p>Se agregaron {productCart} producto/s</p>
         <Link to={`/cart`}><button>Ir al carrito</button></Link>
       </div>
-      : <ItemCount id={id} title={title} price={price} onAddItems={onAdd} stock={stock} initial="1"/>}
+      : <ItemCount id={id} title={title} price={price} desc={description} img={img} onAddItems={onAdd} stock={stock} initial="1"/>}
     </div>
   )
 }

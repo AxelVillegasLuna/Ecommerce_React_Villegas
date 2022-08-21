@@ -35,7 +35,7 @@ const ItemCount = (props) => {
     }
 
     const onAdd = () => {
-        onAddItems(props.id, props.title, props.price, count);
+        onAddItems(props.id, props.title, props.desc, props.img, props.price, count);
     }
 
     return (
