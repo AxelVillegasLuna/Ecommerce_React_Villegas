@@ -28,7 +28,7 @@ const Cart = () => {
               {
               cart.map((product) => (
                 <tr>
-                  <td><img src={product.img}></img></td>
+                  <td><img src={product.img} alt="Imagen del producto"></img></td>
                   <td>{product.title}</td>
                   <td>{product.description}</td>
                   <td>{product.price}</td>
