@@ -1,11 +1,47 @@
 import { useContext } from 'react';
 import './Cart.css';
 import { CartContext } from '../../context/CartContext/CartContext';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { collection, doc, updateDoc, increment, setDoc } from 'firebase/firestore';
+import { db } from '../../Data/DataFirebase'
 
 const Cart = () => {
 
   const { cart, removeFromCart, removeAll, getTotal } = useContext(CartContext);
+  const createOrder = () => {
+    const itemsDB = cart.map(item => ({
+      id: item.id,
+      title: item.title,
+      price: item.price
+    }));
+
+    const order = {
+      buyer: {
+        name: "Axel Villegas Luna",
+        phone: "123456789",
+        email: "avillegas@react.com"
+      },
+      items: itemsDB,
+      total: getTotal()
+    }
+    createrOrderDB(order)
+      .then(result => {
+        alert(`Compra realizada exitosamente con el ID ${result.id}`);
+        cart.forEach(async (item) => {
+          const itemRef = doc(db, "products", item.id);
+          await updateDoc(itemRef, {
+            stock: increment(-item.quantity)
+          })
+        });
+        removeAll();})
+      .catch(error => console.log(error))
+  }
+
+  const createrOrderDB = async (order) => {
+    const newOrder = doc(collection(db, "orders"));
+    await setDoc(newOrder, order);
+    return newOrder
+  }
   
   return(
     <div id="cartDiv">
@@ -49,7 +85,7 @@ const Cart = () => {
           </table>
           <div id="cartButtons">
             <button onClick={() => removeAll()} className="cartButton" id="cleanCart">Limpiar carrito</button>
-            <button className="cartButton" id="buyButton">Realizar compra</button>
+            <button onClick={() => createOrder()} className="cartButton" id="buyButton">Realizar compra</button>
           </div> 
         </div>
         : <div id="emptyCart">
@@ -58,7 +94,6 @@ const Cart = () => {
           </div>
       }
       </div>
-      
     </div>
   )
 }
