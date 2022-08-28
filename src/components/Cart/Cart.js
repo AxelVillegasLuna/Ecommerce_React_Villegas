@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import './Cart.css';
 import { CartContext } from '../../context/CartContext/CartContext';
 import { Link } from 'react-router-dom';
-import { collection, doc, updateDoc, increment, setDoc } from 'firebase/firestore';
+import { collection, doc, updateDoc, increment, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../Data/DataFirebase'
 
 const Cart = () => {
@@ -22,6 +22,7 @@ const Cart = () => {
         email: "avillegas@react.com"
       },
       items: itemsDB,
+      date: serverTimestamp(),
       total: getTotal()
     }
     createrOrderDB(order)
