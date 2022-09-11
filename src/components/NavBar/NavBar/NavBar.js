@@ -17,7 +17,7 @@ function NavBar() {
       </div>
       <ul id="listHeader">
         <li><Link to='/category/notebook'>Notebooks</Link></li>
-        <li><Link to='category/smartwatch'>Smartwatchs</Link></li>
+        <li><Link to='category/smartwatch'>Smartwatches</Link></li>
         <li><Link to='category/tablet'>Tablets</Link></li>
       </ul>
       <div id="divCart">
