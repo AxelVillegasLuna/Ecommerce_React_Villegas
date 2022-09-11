@@ -1,6 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
-import Logo from './logo.svg'
+import Logo from './logo.svg';
 import { Link } from 'react-router-dom';
 
 /* 
@@ -8,13 +8,12 @@ Componente de la barra de navegación donde tenemos el logo/nombre de la página
 utilizamos el componente CartWidget para tener acceso al carrito
 */
 
-
 function NavBar() {
   return (
     <header id="header">
       <div id="logo">
         <img src={Logo} alt='Logo'/>
-        <h1><Link to='/'>ProyectoEcommerce</Link></h1>
+        <h1><Link to='/'>TecnoReact</Link></h1>
       </div>
       <ul id="listHeader">
         <li><Link to='/category/notebook'>Notebooks</Link></li>
@@ -28,4 +27,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default NavBar;

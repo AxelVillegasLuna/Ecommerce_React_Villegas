@@ -1,5 +1,5 @@
 import './ItemCount.css';
-import { useState } from "react"
+import { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 
@@ -8,12 +8,15 @@ Componente del contador utilizado para elegir la cantidad de cada uno de los pro
 */
 
 const ItemCount = (props) => {
+    // Seteo de variables
     const stock = parseInt(props.stock);
     const initial = parseInt(props.initial);
     const onAddItems = props.onAddItems;
 
+    // Declaración de estados
     const [count, setCount] = useState(initial);
     
+    // Función para aumentar contador
     const addCount = () => {
         if(stock == 0){
             alert("No hay stock disponible");
@@ -24,16 +27,18 @@ const ItemCount = (props) => {
         }
     }
     
+    // Función para disminuir contador
     const subtractCount = () => {
         if(stock == 0){
             alert("No hay stock disponible");
-        }else if(count > initial){
+        }else if(count > 1){
             setCount(count - 1);
         }else{
-            alert(`No puedes elegir menos de ${initial} producto/s`);
+            alert(`No puedes elegir menos de un producto/s`);
         }
     }
 
+    // Función para añadir productos al carrito
     const onAdd = () => {
         onAddItems(props.id, props.title, props.desc, props.img, props.price, count);
     }
@@ -52,4 +57,4 @@ const ItemCount = (props) => {
     )
 }
 
-export default ItemCount
+export default ItemCount;

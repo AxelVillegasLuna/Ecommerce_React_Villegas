@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore'
+import { getFirestore } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
+// Configuración de la base de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBO58eh0bNxy7Dw10mPf93I7NtaVtwh1eQ",
   authDomain: "react-ecommerce-3e981.firebaseapp.com",
@@ -11,7 +11,8 @@ const firebaseConfig = {
   appId: "1:798947229934:web:397f44ed4f7c68971a73ff"
 };
 
-// Initialize Firebase
+// Inicialización de la App en Firebase
 const app = initializeApp(firebaseConfig);
+
 // Seleccionamos la base de datos de Firestore
 export const db = getFirestore(app);

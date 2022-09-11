@@ -1,5 +1,7 @@
 # Proyecto de e-commerce hecho con ReactJS
 
+## TecnoReact
+
 Este proyecto se basa en una casa de productos de tecnología.
 Se utilizaron imagenes extraidas de la página Venex.
 Por el momento, no se han utilizado depedencias extras pero en un futuro probablemente las utilice.

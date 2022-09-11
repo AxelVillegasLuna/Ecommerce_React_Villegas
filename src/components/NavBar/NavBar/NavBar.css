@@ -25,6 +25,13 @@ width: 25%;
 #logo img{
     max-width: 100px;
     max-height: 100px;
+    animation: logo 5s linear infinite;
+}
+
+@keyframes logo {
+    0% {
+        transform: rotate(360deg);
+    }
 }
 
 #logo h1 a{
